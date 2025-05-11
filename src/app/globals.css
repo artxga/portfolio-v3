@@ -1,17 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-light: #ffffff;
+  --foreground-light: #121212;
+  --accent-light: #aaaaaa;
+  --hover-light: #292929;
+  --details-light: #ebebeb;
+
+  --background-dark: #121212;
+  --foreground-dark: #ffffff;
+  --accent-dark: #aaaaaa;
+  --hover-dark: #1a1a1a;
+  --details-dark: #333333;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-background-light: var(--background-light);
+  --color-foreground-light: var(--foreground-light);
+  --color-accent-light: var(--accent-light);
+  --color-hover-light: var(--hover-light);
+  --color-details-light: var(--details-light);
+
+  --color-background-dark: var(--background-dark);
+  --color-foreground-dark: var(--foreground-dark);
+  --color-accent-dark: var(--accent-dark);
+  --color-hover-dark: var(--hover-dark);
+  --color-details-dark: var(--details-dark);
+
+  /* Fuentes */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
 }
 
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +45,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
