@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { LanguageProvider } from "@/context/language-context";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased  duration-300 bg-[var(--background)] text-[var(--foreground)]`}>
-
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
