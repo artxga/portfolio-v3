@@ -1,48 +1,24 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/* Tema por defecto (light) */
 :root {
-  --background-light: #ffffff;
-  --foreground-light: #121212;
-  --accent-light: #aaaaaa;
-  --hover-light: #292929;
-  --details-light: #ebebeb;
+  --background: #f9fafb;
+  --foreground: #1e293b;
+  --foreground-paragraph: #586474;
+  --accent: #3b82f6;
+  --hover: #2563eb;
+  --details: #cbd5e1;
 
-  --background-dark: #121212;
-  --foreground-dark: #ffffff;
-  --accent-dark: #aaaaaa;
-  --hover-dark: #1a1a1a;
-  --details-dark: #333333;
-}
-
-@theme {
-  --color-background-light: var(--background-light);
-  --color-foreground-light: var(--foreground-light);
-  --color-accent-light: var(--accent-light);
-  --color-hover-light: var(--hover-light);
-  --color-details-light: var(--details-light);
-
-  --color-background-dark: var(--background-dark);
-  --color-foreground-dark: var(--foreground-dark);
-  --color-accent-dark: var(--accent-dark);
-  --color-hover-dark: var(--hover-dark);
-  --color-details-dark: var(--details-dark);
-
-  /* Fuentes */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
 }
 
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Tema oscuro */
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --foreground-paragraph: #bac1c9;
+  --accent: #3b82f6;
+  --hover: #60a5fa;
+  --details: #334155;
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */

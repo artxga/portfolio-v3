@@ -2,19 +2,25 @@ import TechTag from "./tech-tag";
 
 export default function ExperienceItem() {
   return (
-    <div className="flex items-stretch gap-9">
-      <div className="relative w-3 bg-foreground-light">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2.625rem] h-[2.625rem] rounded-full bg-accent-light"></div>
+    <div className="flex items-stretch gap-8">
+      <div className="relative flex flex-col items-center w-3">
+        <div className="flex-1 w-2 rounded-xs bg-[var(--foreground)] opacity-20"></div>
+        <div className="my-2 rounded-full w-9 h-9 bg-[var(--accent)]"></div>
+        <div className="flex-1 w-2 rounded-xs bg-[var(--foreground)] opacity-20"></div>
       </div>
-      <div className="flex flex-col gap-2 my-8">
+      <div className="flex flex-col gap-3 pb-12">
         <div className="flex flex-col gap-1">
-          <span className="font-bold text-lg ">Full Stack Developer</span>
-          <span className="font-bold text-base text-accent-light">Promart | Aug 2024 - Present</span>
+          <span className="text-base font-medium text-[var(--foreground)]">
+            Full Stack Developer
+          </span>
+          <span className="text-sm font-medium text-[var(--accent)]">
+            Promart | Aug 2024 - Present
+          </span>
         </div>
-        <span className="text-sm">
+        <span className="text-sm text-[var(--foreground-paragraph)] opacity-90">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut odit voluptatum temporibus quia, ex autem provident voluptates dolore qui sit a eum nisi, possimus, unde ducimus exercitationem recusandae ipsa sunt!
         </span>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-x-1.5 gap-y-2">
           <TechTag name="React" />
           <TechTag name="Next.js" />
           <TechTag name="Node.js" />

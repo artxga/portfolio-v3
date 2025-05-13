@@ -1,8 +1,8 @@
 export default function SectionTitle({ title }: { title: string }) {
   return (
     <div className="flex items-center gap-4 uppercase">
-      <span className="text-base font-bold">{title}</span>
-      <span className="h-0.5 w-full bg-foreground-light"></span>
+      <h2 className="text-base font-bold text-[var(--foreground)]">{title}</h2>
+      <span className="h-0.5 flex-1 bg-[var(--details)]"></span>
     </div>
   );
 }
