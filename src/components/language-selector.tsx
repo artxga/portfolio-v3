@@ -88,7 +88,7 @@ const LanguageSelector = () => {
           onMouseLeave={hideMenu}
         >
           {!isSmallScreen && (
-            <div className="absolute right-3 -bottom-2 w-3 h-3 bg-[var(--background)] border-r border-b border-[var(--accent)] rotate-45 z-0" />
+            <div className="absolute right-3 -bottom-2 w-3 h-3 bg-[var(--background)]-80 backdrop-blur-xl border-r border-b border-[var(--accent)] rotate-45 z-0" />
           )}
 
           <ul className="relative z-10 space-y-2 text-sm">
