@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import useIsSmallScreen from '@/hooks/use-is-small-screen'
 
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(false)
+
+  const isSmallScreen = useIsSmallScreen()
+  const iconSize = isSmallScreen ? 24 : 30
 
   useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark'
@@ -22,10 +26,10 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className=""
+      className="hover:cursor-pointer"
       aria-label="Toggle dark mode"
     >
-      {darkMode ? <Sun className='text-[var(--foreground)] hover:text-[var(--accent)]' size={32} /> : <Moon className='text-[var(--foreground)] hover:text-[var(--accent)]' size={32} />}
+      {darkMode ? <Sun className='text-[var(--foreground)] hover:text-[var(--accent)]' size={iconSize} /> : <Moon className='text-[var(--foreground)] hover:text-[var(--accent)]' size={iconSize} />}
     </button>
   )
 }

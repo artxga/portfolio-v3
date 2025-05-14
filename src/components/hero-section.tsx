@@ -10,7 +10,7 @@ export default function HeroSection() {
   const currentSection = useScrollSpy(sectionIds)
 
   return (
-    <div className="top-0 flex flex-col justify-center h-screen col-start-1 col-end-13 md:sticky md:col-start-2 md:col-span-4 2xl:col-start-3">
+    <div className="top-0 flex flex-col justify-center h-screen col-start-1 col-end-13 md:sticky md:col-start-2 md:col-span-4 2xl:col-span-3 2xl:col-start-3">
       <div className="flex flex-col gap-16 h-fit">
         <div className="flex flex-col gap-4">
           <h1 className="text-4xl font-bold md:text-5xl text-[var(--foreground)]">
@@ -23,7 +23,7 @@ export default function HeroSection() {
             {heroData.description[language]} </p>
         </div>
 
-        <ul className="flex flex-col gap-4 text-sm font-bold uppercase text-[var(--foreground)]">
+        <ul className="md:flex hidden flex-col gap-4 text-sm font-bold uppercase text-[var(--foreground)]">
           {heroData.navLinks.map((link) => (
             <li key={link.id}>
               <NavItemWithIndicator href={`#${link.id}`} name={link.label[language]} isActive={currentSection === link.id} />

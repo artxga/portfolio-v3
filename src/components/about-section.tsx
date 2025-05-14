@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="flex flex-col gap-6 md:gap-8 md:justify-center md:h-screen"
+      className="flex flex-col gap-6 md:gap-8 md:justify-center md:min-h-screen"
     >
       <SectionTitle title={title[language]} />
 
