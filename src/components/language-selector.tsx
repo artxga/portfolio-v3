@@ -3,6 +3,7 @@
 import { Languages } from "lucide-react"
 import { useState, useRef } from "react"
 import { useLanguage } from "@/context/language-context"
+import SupportedLanguages from "@/core/types/supported-languages"
 
 const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,9 +24,8 @@ const LanguageSelector = () => {
     }, 250)
   }
 
-  const changeLanguage = (lang: 'en' | 'es') => {
+  const changeLanguage = (lang: SupportedLanguages) => {
     setLanguage(lang)
-    console.log(`Idioma cambiado a: ${lang === 'en' ? 'Inglés' : 'Español'}`)
   }
 
   return (

@@ -1,4 +1,14 @@
-const experienceData = [
+import SupportedLanguages from "../types/supported-languages";
+
+export interface ExperienceData {
+  jobTitle: Record<SupportedLanguages, string>;
+  company: Record<SupportedLanguages, string>;
+  period: Record<SupportedLanguages, string>;
+  description: Record<SupportedLanguages, string>;
+  tools: Record<SupportedLanguages, string[]>;
+}
+
+export const experiences: ExperienceData[] = [
   {
     jobTitle: {
       en: "Full Stack Developer",
@@ -66,5 +76,3 @@ const experienceData = [
     },
   },
 ];
-
-export default experienceData;
