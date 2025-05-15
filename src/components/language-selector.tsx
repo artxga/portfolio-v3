@@ -78,12 +78,15 @@ const LanguageSelector = () => {
       {shouldRender && (
         <div
           className={cn(
-            "absolute bg-[var(--background)]-80 backdrop-blur-xl border border-[var(--accent)] rounded-xl shadow-xl p-3 w-36 z-50 transition-all duration-200 transform",
+            "absolute backdrop-blur-xl border border-[var(--accent)] rounded-xl shadow-xl p-3 w-36 z-50 transition-all duration-200 transform",
             isSmallScreen ? "top-10 right-0" : "bottom-12 right-0",
             isOpen
               ? "opacity-100 scale-100 translate-y-0"
               : "opacity-0 scale-95 translate-y-1"
           )}
+          style={{
+            backgroundColor: "rgba(var(--background), 0.8)"
+          }}
           onMouseEnter={showMenu}
           onMouseLeave={hideMenu}
         >
