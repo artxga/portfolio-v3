@@ -5,17 +5,13 @@ import DarkModeToggle from "@/components/dark-mode-toggle";
 import ExperienceSection from "@/components/experience-section";
 import HeroSection from "@/components/hero-section";
 import LanguageSelector from "@/components/language-selector";
+import MobileNavbar from "@/components/mobile-navbar";
 import ProjectsSection from "@/components/projects-section";
 
 export default function LandingPage() {
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full md:hidden h-16 bg-[var(--background)]-80 backdrop-blur-xl">
-        <div className="flex items-center justify-end h-full gap-4 px-6 ">
-          <DarkModeToggle />
-          <LanguageSelector />
-        </div>
-      </nav>
+      <MobileNavbar />
       <div className="grid grid-cols-12 min-h-screen px-6 font-[family-name:var(--font-inter)]">
 
         <div className="fixed flex-col hidden gap-5 md:flex bottom-5 right-8">
