@@ -29,9 +29,8 @@ export default function ProjectItem(props: typeof projects[number]) {
   }, [language])
 
   return (
-    <div className="grid grid-cols-1 grid-rows-[auto_1fr] transition-all duration-300 ease-in-out rounded-lg md:gap-3 md:grid-rows-1 md:grid-cols-8 hover:bg-[var(--details)] hover:cursor-pointer md:p-3 motion-reduce:transition-none">
+    <div className="grid grid-cols-1 grid-rows-[auto_1fr] transition-all duration-300 ease-in-out rounded-lg md:gap-3 md:grid-rows-1 md:grid-cols-8 md:hover:bg-[rgba(var(--details-rgb),0.3)] md:hover:backdrop-blur-xl hover:cursor-pointer md:p-3 motion-reduce:transition-none">
       <div className="row-start-2 row-end-3 mt-3 w-[200px] md:w-full rounded-lg md:row-start-1 md:row-end-2 md:col-span-3 aspect-video bg-[var(--accent)] md:mt-0">
-        {/* Imagen o preview del proyecto */}
       </div>
       <div className="flex flex-col col-span-5 gap-3">
         <h3 className="text-base font-medium text-[var(--foreground)]">

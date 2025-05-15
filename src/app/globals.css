@@ -9,6 +9,8 @@
   --accent: #3b82f6;
   --hover: #2563eb;
   --details: #cbd5e1;
+  --hover-rgb: 37, 99, 235;
+  --details-rgb: 203, 213, 225;
 
   --font-inter: var(--font-inter);
 }
@@ -21,4 +23,6 @@
   --accent: #3b82f6;
   --hover: #60a5fa;
   --details: #334155;
+  --hover-rgb: 96, 165, 250;
+  --details-rgb: 51, 65, 85;
 }
