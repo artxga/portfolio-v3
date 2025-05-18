@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* Tema por defecto (light) */
+/* Soft Tech Blue 1*/
 :root {
   --background: #f9fafb;
   --foreground: #1e293b;
@@ -16,7 +16,6 @@
   --font-inter: var(--font-inter);
 }
 
-/* Tema oscuro */
 [data-theme="dark"] {
   --background: #0f172a;
   --foreground: #f1f5f9;
@@ -28,3 +27,128 @@
   --hover-rgb: 96, 165, 250;
   --details-rgb: 51, 65, 85;
 }
+
+/* Grayscale Elegant */
+/* :root {
+  --background: #ffffff;
+  --foreground: #121212;
+  --foreground-paragraph: #4b4b4b;
+  --accent: #aaaaaa;
+  --hover: #1a1a1a;
+  --details: #f5f5f5;
+
+  --accent-rgb: 170, 170, 170;
+  --hover-rgb: 26, 26, 26;
+  --details-rgb: 245, 245, 245;
+
+  --font-inter: var(--font-inter);
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --foreground: #ffffff;
+  --foreground-paragraph: #dddddd;
+  --accent: #aaaaaa;
+  --hover: #f5f5f5;
+  --details: #1a1a1a;
+
+  --accent-rgb: 170, 170, 170;
+  --hover-rgb: 245, 245, 245;
+  --details-rgb: 26, 26, 26;
+} */
+
+/* Midnight Blue 2*/
+/* :root {
+  --background: #ffffff;
+  --foreground: #121212;
+  --foreground-paragraph: #4b4b4b;
+  --accent: #6366f1;
+  --hover: #4f46e5;
+  --details: #e2e8f0;
+
+  --accent-rgb: 99, 102, 241;
+  --hover-rgb: 79, 70, 229;
+  --details-rgb: 226, 232, 240;
+
+  --font-inter: var(--font-inter);
+}
+
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --foreground-paragraph: #cbd5e1;
+  --accent: #6366f1;
+  --hover: #4f46e5;
+  --details: #1e293b;
+
+  --accent-rgb: 99, 102, 241;
+  --hover-rgb: 79, 70, 229;
+  --details-rgb: 30, 41, 59;
+} */
+
+/* Steel and Ice 3*/
+/* :root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --foreground-paragraph: #334155;
+  --accent: #64748b;
+  --hover: #475569;
+  --details: #e2e8f0;
+
+  --accent-rgb: 100, 116, 139;
+  --hover-rgb: 71, 85, 105;
+  --details-rgb: 226, 232, 240;
+
+  --font-inter: var(--font-inter);
+}
+
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --foreground-paragraph: #cbd5e1;
+  --accent: #64748b;
+  --hover: #475569;
+  --details: #1e293b;
+
+  --accent-rgb: 100, 116, 139;
+  --hover-rgb: 71, 85, 105;
+  --details-rgb: 30, 41, 59;
+} */
+
+/* Natural Warm */
+/* :root {
+  --background: #fffefc;
+  --foreground: #3e3e3e;
+  --foreground-paragraph: #5c5c5c;
+  --accent: #fbbf24;
+  --hover: #f59e0b;
+  --details: #fef3c7;
+}
+
+[data-theme="dark"] {
+  --background: #1f1e1d;
+  --foreground: #fafaf9;
+  --foreground-paragraph: #e7e5e4;
+  --accent: #fcd34d;
+  --hover: #fde68a;
+  --details: #4a4034;
+} */
+
+/* Neon */
+/* :root {
+  --background: #f5f7ff;
+  --foreground: #2c3e50;
+  --foreground-paragraph: #6b7280;
+  --accent: #8b5cf6;
+  --hover: #7c3aed;
+  --details: #d1d5db;
+}
+
+[data-theme="dark"] {
+  --background: #121827;
+  --foreground: #e0e7ff;
+  --foreground-paragraph: #a5b4fc;
+  --accent: #a78bfa;
+  --hover: #8b5cf6;
+  --details: #373e68;
+} */
