@@ -5,19 +5,17 @@ import TechTag from "./tech-tag";
 import { useLanguage } from "@/context/language-context";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import useIsSmallScreen from "@/hooks/use-is-small-screen";
 
 export default function ProjectItem(props: typeof projects[number]) {
 
   const { language } = useLanguage()
+  const isSmall = useIsSmallScreen()
 
-  const [fields, setFields] = useState<{
-    title: string,
-    description: string,
-  }>({
+  const [fields, setFields] = useState({
     title: props.title[language],
     description: props.description[language],
   })
-
 
   useEffect(() => {
     setFields({
@@ -26,7 +24,7 @@ export default function ProjectItem(props: typeof projects[number]) {
     })
   }, [language])
 
-  const Wrapper = props.link
+  const Wrapper = props.link && !isSmall
     ? ({ children }: { children: React.ReactNode }) => (
       <a
         href={props.link}
@@ -54,18 +52,32 @@ export default function ProjectItem(props: typeof projects[number]) {
         </div>
 
         <div className="flex flex-col col-span-5 gap-3 transition-colors duration-300">
-          <h3 className="text-base font-medium text-[var(--foreground)] group-hover:text-[var(--accent)]">
-            {fields.title}
-          </h3>
+
+          {props.link && isSmall ? (
+            <a
+              href={props.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit"
+            >
+              <h3 className="text-base font-medium text-[var(--foreground)] group-hover:text-[var(--accent)]">
+                {fields.title}
+              </h3>
+            </a>
+          ) : (
+            <h3 className="text-base font-medium text-[var(--foreground)] group-hover:text-[var(--accent)]">
+              {fields.title}
+            </h3>
+          )}
+
           <span className="text-sm text-[var(--foreground-paragraph)] opacity-90 group-hover:opacity-100">
             {fields.description}
           </span>
+
           <div className="flex flex-wrap gap-x-1.5 gap-y-2">
-            {
-              props.techStack.map((tech) => (
-                <TechTag key={tech} name={tech} />
-              ))
-            }
+            {props.techStack.map((tech) => (
+              <TechTag key={tech} name={tech} />
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default function BackgroundBubbles() {
   return (
-    <div className="fixed inset-0 overflow-hidden -z-10">
+    <div className="fixed inset-0 top-0 overflow-hidden -z-10">
       <div
         className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] rounded-full blur-3xl opacity-30 animate-pulse"
         style={{ animationDuration: "6s", backgroundColor: "var(--accent)" }}

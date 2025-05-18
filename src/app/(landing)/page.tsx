@@ -27,7 +27,7 @@ export default function LandingPage() {
         <div className="flex flex-col col-start-1 col-end-13 mb-12 md:col-start-7 md:col-end-12 2xl:col-end-11">
           <section className="flex-col justify-center hidden h-screen md:flex">
             <div
-              className="overflow-hidden rounded-lg h-10/12"
+              className="overflow-hidden rounded-lg h-9/12"
               style={{
                 WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
                 maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
