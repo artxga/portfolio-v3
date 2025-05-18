@@ -23,7 +23,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["React", "Next.js", "Tailwind", "TypeScript", "Git"],
     img: {
-      src: "/projects/portfolio_3.png",
+      src: "/projects/portfolio_3.webp",
       alt: "Portfolio 3.0",
     },
     link: "https://github.com/artxga/portfolio-v3",
@@ -49,7 +49,7 @@ export const projects: ProjectData[] = [
       "Git",
     ],
     img: {
-      src: "/projects/savings_project.png",
+      src: "/projects/savings_project.webp",
       alt: "Savings App",
     },
   },
@@ -64,7 +64,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["Angular", "Ionic", "Node.js", "Git"],
     img: {
-      src: "/projects/sisgeap.png",
+      src: "/projects/sisgeap.webp",
       alt: "SISGEAP App",
     },
   },
@@ -79,7 +79,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["Serverless", "Node.js", "AWS", "Docker", "Jest", "Git"],
     img: {
-      src: "/projects/medical_appointment.png",
+      src: "/projects/medical_appointment.webp",
       alt: "Medical Appointment Service",
     },
     link: "https://github.com/artxga/aws-scheduler-project",
@@ -95,7 +95,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["React", "Next.js", "Tailwind", "TypeScript", "Git"],
     img: {
-      src: "/projects/altavista_it.png",
+      src: "/projects/altavista_it.webp",
       alt: "Altavista IT Web",
     },
     link: "https://altavista-it.com/",
@@ -111,7 +111,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["React", "Next.js", "Tailwind", "TypeScript", "Git"],
     img: {
-      src: "/projects/portfolio_2.png",
+      src: "/projects/portfolio_2.webp",
       alt: "Portafolio 2.0",
     },
     link: "https://ssssshel.vercel.app/",
@@ -134,7 +134,7 @@ export const projects: ProjectData[] = [
       "Docker",
     ],
     img: {
-      src: "/projects/asterisks.png",
+      src: "/projects/asterisks.webp",
       alt: "Asterisks",
     },
   },
@@ -149,7 +149,7 @@ export const projects: ProjectData[] = [
     },
     techStack: ["React", "Next.js", "Tailwind", "TypeScript", "MongoDB", "Git"],
     img: {
-      src: "/projects/dione.png",
+      src: "/projects/dione.webp",
       alt: "Dione",
     },
     link: "https://dione.vercel.app/",

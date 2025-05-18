@@ -60,7 +60,7 @@ export const experiences: ExperienceData[] = [
       ],
     },
     logo: {
-      src: "/promart_logo.jpg",
+      src: "/experiences/promart_logo.jpg",
       alt: "Promart Logo",
     },
     link: "https://www.promart.pe/",
@@ -107,7 +107,7 @@ export const experiences: ExperienceData[] = [
       ],
     },
     logo: {
-      src: "/avatar_global_logo.jpg",
+      src: "/experiences/avatar_global_logo.jpg",
       alt: "Avatar Global Logo",
     },
     link: "https://www.avatar-global.com/",
@@ -134,7 +134,7 @@ export const experiences: ExperienceData[] = [
       es: ["Angular", "Ionic", "React", "Node.js"],
     },
     logo: {
-      src: "/ntt_data_logo.jpg",
+      src: "/experiences/ntt_data_logo.jpg",
       alt: "NTT Data Logo",
     },
     link: "https://pe.nttdata.com/",

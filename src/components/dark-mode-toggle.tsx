@@ -2,13 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
-import useIsSmallScreen from '@/hooks/use-is-small-screen'
 
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(false)
 
-  const isSmallScreen = useIsSmallScreen()
-  const iconSize = isSmallScreen ? 24 : 30
+  const iconSize = 24
 
   useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark'
