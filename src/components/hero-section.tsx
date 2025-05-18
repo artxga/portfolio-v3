@@ -1,10 +1,10 @@
 "use client"
 
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import NavItemWithIndicator from "./nav-item-with-indicator";
 import { useLanguage } from "@/context/language-context";
 import { heroData } from "@/core/static/hero";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import SocialBar from "./social-bar";
 
 export default function HeroSection() {
   const { language } = useLanguage()
@@ -33,21 +33,16 @@ export default function HeroSection() {
           ))}
         </ul>
 
-        <button className="relative w-fit group text-sm font-medium uppercase text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)] focus-visible:text-[var(--accent)]">
-          {heroData.resume[language]}
+        <a className="relative w-fit group text-sm font-medium uppercase text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)] focus-visible:text-[var(--accent)]"
+          href={heroData.resume[language].file}
+          download
+          target="_blank"
+          rel="noopener noreferrer">
+          {heroData.resume[language].description}
           <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[var(--accent)] transition-all duration-300 transform -translate-x-1/2 group-hover:w-full group-focus-visible:w-full"></span>
-        </button>
+        </a>
 
-        <div className="flex gap-4">
-          {[Instagram, Linkedin, Github, Mail].map((Icon, idx) => (
-            <button
-              key={idx}
-              className="text-[var(--foreground)] transition-transform duration-200 hover:text-[var(--accent)] focus-visible:text-[var(--accent)] hover:scale-110 focus-visible:scale-110"
-            >
-              <Icon size={24} />
-            </button>
-          ))}
-        </div>
+        <SocialBar />
       </div>
     </div>
   );

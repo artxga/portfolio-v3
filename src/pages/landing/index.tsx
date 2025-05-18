@@ -7,6 +7,7 @@ import HeroSection from "@/components/hero-section";
 import LanguageSelector from "@/components/language-selector";
 import MobileNavbar from "@/components/mobile-navbar";
 import ProjectsSection from "@/components/projects-section";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -25,8 +26,23 @@ export default function LandingPage() {
 
         <div className="flex flex-col col-start-1 col-end-13 mb-12 md:col-start-7 md:col-end-12 2xl:col-end-11">
           <section className="flex-col justify-center hidden h-screen md:flex">
-            <div className="h-10/12 bg-slate-200"></div>
+            <div
+              className="overflow-hidden rounded-lg h-10/12"
+              style={{
+                WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+                maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+              }}
+            >
+              <Image
+                src="/portrait.jpg"
+                alt="portrait"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
           </section>
+
 
           <AboutSection />
           <ExperienceSection />

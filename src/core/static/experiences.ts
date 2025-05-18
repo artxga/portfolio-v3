@@ -115,7 +115,7 @@ export const experiences: ExperienceData[] = [
   {
     jobTitle: {
       en: "Mobile Frontend Engineer",
-      es: "Ingeniero Frontend Móvil",
+      es: "Ingeniero Frontend Mobile",
     },
     company: {
       en: "NTT DATA - Telefónica (Tren E-Care)",

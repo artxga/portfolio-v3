@@ -5,8 +5,8 @@ export const heroData = {
     es: "Desarrollador Full Stack",
   },
   description: {
-    en: "I build impactful, scalable tech solutions that solve real-world problems.",
-    es: "Creo soluciones tecnológicas impactantes y escalables que resuelven problemas reales.",
+    en: "I create tech solutions that generate real impact.",
+    es: "Creo soluciones tecnológicas que generan impacto real.",
   },
   navLinks: [
     { id: "about", label: { en: "About", es: "Sobre mí" } },
@@ -14,7 +14,13 @@ export const heroData = {
     { id: "projects", label: { en: "Projects", es: "Proyectos" } },
   ],
   resume: {
-    en: "Download Resume",
-    es: "Descargar CV",
+    en: {
+      description: "Download Resume",
+      file: "/CV_Angel_Arteaga.pdf",
+    },
+    es: {
+      description: "Descargar CV",
+      file: "/CV_Angel_Arteaga.pdf",
+    },
   },
 };
