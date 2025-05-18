@@ -3,6 +3,7 @@
 import TechTag from "./tech-tag";
 import { useLanguage } from "@/context/language-context";
 import { experiences } from "@/core/static/experiences";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function ExperienceItem(props: typeof experiences[number]) {
@@ -37,7 +38,9 @@ export default function ExperienceItem(props: typeof experiences[number]) {
     <div className="flex items-stretch gap-8">
       <div className="relative flex flex-col items-center w-3">
         <div className="flex-1 w-2 rounded-xs bg-[var(--foreground)] opacity-20"></div>
-        <div className="my-2 rounded-full w-9 h-9 bg-[var(--accent)]"></div>
+        <div className="my-2 rounded-full w-9 h-9 bg-[var(--accent)] overflow-hidden">
+          <Image src={props.logo.src} alt={props.logo.alt} width={100} height={100} className="w-full h-full" />
+        </div>
         <div className="flex-1 w-2 rounded-xs bg-[var(--foreground)] opacity-20"></div>
       </div>
       <div className="flex flex-col gap-3 pb-12">
@@ -45,9 +48,9 @@ export default function ExperienceItem(props: typeof experiences[number]) {
           <span className="text-base font-medium text-[var(--foreground)]">
             {fields?.jobTitle}
           </span>
-          <span className="text-sm font-medium text-[var(--accent)]">
+          <a className="text-sm font-medium text-[var(--accent)] hover:text-[var(--hover)] " href={props.link} target="_blank">
             {fields?.company} | {fields?.period}
-          </span>
+          </a>
         </div>
         <span className="text-sm text-[var(--foreground-paragraph)] opacity-90">
           {fields?.description}

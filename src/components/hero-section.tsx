@@ -1,3 +1,5 @@
+"use client"
+
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import NavItemWithIndicator from "./nav-item-with-indicator";
 import { useLanguage } from "@/context/language-context";

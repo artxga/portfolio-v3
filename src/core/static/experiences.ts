@@ -6,6 +6,11 @@ export interface ExperienceData {
   period: Record<SupportedLanguages, string>;
   description: Record<SupportedLanguages, string>;
   tools: Record<SupportedLanguages, string[]>;
+  logo: {
+    src: string;
+    alt: string;
+  };
+  link: string;
 }
 
 export const experiences: ExperienceData[] = [
@@ -15,64 +20,123 @@ export const experiences: ExperienceData[] = [
       es: "Desarrollador Full Stack",
     },
     company: {
-      en: "Promart",
-      es: "Promart",
+      en: "Promart (Corporate Sales Management)",
+      es: "Promart (Gerencia Vta. Corporativa)",
     },
     period: {
-      en: "January 2021 - Present",
-      es: "Enero 2021 - Actualidad",
+      en: "August 2024 - Present",
+      es: "Agosto 2024 - Actualidad",
     },
     description: {
-      en: "Responsible for developing new features for the B2B e-commerce platform and optimizing internal systems that improve sales management and operational processes.",
-      es: "Responsable del desarrollo de nuevas funcionalidades para la plataforma de comercio electrónico B2B y la optimización de sistemas internos que mejoran la gestión de ventas y los procesos operativos.",
+      en: "Developed features for a B2B e-commerce platform, focusing on personalized bulk purchases for corporate clients. Maintained and improved a custom internal CRM to support sales operations across online and in-store channels. Worked on microservice-based systems and integrated with third-party services to ensure reliable and synchronized data flow.",
+      es: "Desarrollé funcionalidades para una plataforma e-commerce B2B, enfocadas en compras masivas personalizadas para clientes corporativos. Di mantenimiento y mejoras a un CRM interno personalizado que respaldaba operaciones de ventas en línea y en tienda. Trabajé con sistemas basados en microservicios e integraciones con servicios externos para asegurar un flujo de datos sincronizado y confiable.",
     },
     tools: {
-      en: ["React", "Angular", "Node.js", "AWS", "Docker"],
-      es: ["React", "Angular", "Node.js", "AWS", "Docker"],
+      en: [
+        "React",
+        "Vue",
+        "Node.js",
+        "PHP",
+        "Python",
+        "Go",
+        "Java",
+        "Docker",
+        "MySQL",
+        "GCP",
+        "AWS",
+      ],
+      es: [
+        "React",
+        "Vue",
+        "Node.js",
+        "PHP",
+        "Python",
+        "Go",
+        "Java",
+        "Docker",
+        "MySQL",
+        "GCP",
+        "AWS",
+      ],
     },
+    logo: {
+      src: "/promart_logo.jpg",
+      alt: "Promart Logo",
+    },
+    link: "https://www.promart.pe/",
   },
   {
     jobTitle: {
-      en: "Backend Developer",
-      es: "Desarrollador Backend",
+      en: "Full Stack Developer",
+      es: "Desarrollador Full Stack",
     },
     company: {
-      en: "Telefónica",
-      es: "Telefónica",
+      en: "Avatar Global",
+      es: "Avatar Global",
     },
     period: {
-      en: "June 2019 - December 2020",
-      es: "Junio 2019 - Diciembre 2020",
+      en: "May 2023 – August 2024",
+      es: "Mayo 2023 – Agosto 2024",
     },
     description: {
-      en: "Developed backend solutions for mobile applications and digital platforms, ensuring scalability and system performance.",
-      es: "Desarrollé soluciones backend para aplicaciones móviles y plataformas digitales, asegurando la escalabilidad y el rendimiento del sistema.",
+      en: "Built custom e-commerce solutions for clients in various countries, aligned with specific business requirements. Developed scalable microservices using Java and Node.js to support inventory management and transactional flows. Contributed to the configuration of development and production environments, enhancing team collaboration and deployment stability.",
+      es: "Construí soluciones e-commerce personalizadas para clientes en distintos países, alineadas a requerimientos específicos del negocio. Desarrollé microservicios escalables con Java y Node.js para respaldar la gestión de inventario y flujos transaccionales. Contribuí a la configuración de entornos de desarrollo y producción, mejorando la colaboración entre equipos y la estabilidad en despliegues.",
     },
     tools: {
-      en: ["Java", "Spring Boot", "MySQL", "Kafka"],
-      es: ["Java", "Spring Boot", "MySQL", "Kafka"],
+      en: [
+        "React",
+        "Node.js",
+        "NestJS",
+        "Java",
+        "Docker",
+        "SQL",
+        "Salesforce B2B",
+        "HCL Commerce",
+        "AWS",
+      ],
+      es: [
+        "React",
+        "Node.js",
+        "NestJS",
+        "Java",
+        "Docker",
+        "SQL",
+        "Salesforce B2B",
+        "HCL Commerce",
+        "AWS",
+      ],
     },
+    logo: {
+      src: "/avatar_global_logo.jpg",
+      alt: "Avatar Global Logo",
+    },
+    link: "https://www.avatar-global.com/",
   },
   {
     jobTitle: {
-      en: "Web Developer",
-      es: "Desarrollador Web",
+      en: "Mobile Frontend Engineer",
+      es: "Ingeniero Frontend Móvil",
     },
     company: {
-      en: "AltaVista IT",
-      es: "AltaVista IT",
+      en: "NTT DATA - Telefónica (Tren E-Care)",
+      es: "NTT DATA - Telefónica (Tren E-Care)",
     },
     period: {
-      en: "March 2018 - May 2019",
-      es: "Marzo 2018 - Mayo 2019",
+      en: "August 2022 – May 2023",
+      es: "Agosto 2022 – Mayo 2023",
     },
     description: {
-      en: "Designed and implemented web platforms for clients, working on both frontend and backend development with a focus on user experience and performance.",
-      es: "Diseñé e implementé plataformas web para clientes, trabajando en el desarrollo tanto del frontend como del backend, con un enfoque en la experiencia del usuario y el rendimiento.",
+      en: "Developed mobile applications for customer service management using Angular and Ionic. Integrated frontend components with Telefónica’s internal systems through APIs, ensuring efficient access to critical processes. Focused on enhancing performance and responsiveness for Android and iOS devices.",
+      es: "Desarrollé aplicaciones móviles para la gestión de servicios y atención al cliente con Angular e Ionic. Integré componentes frontend con los sistemas internos de Telefónica mediante APIs, asegurando el acceso eficiente a procesos clave. Me enfoqué en optimizar el rendimiento y la responsividad en dispositivos Android e iOS.",
     },
     tools: {
-      en: ["Vue.js", "Node.js", "MongoDB", "Git"],
-      es: ["Vue.js", "Node.js", "MongoDB", "Git"],
+      en: ["Angular", "Ionic", "React", "Node.js"],
+      es: ["Angular", "Ionic", "React", "Node.js"],
     },
+    logo: {
+      src: "/ntt_data_logo.jpg",
+      alt: "NTT Data Logo",
+    },
+    link: "https://pe.nttdata.com/",
   },
 ];

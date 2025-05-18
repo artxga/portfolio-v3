@@ -1,3 +1,5 @@
+"use client"
+
 import { useLanguage } from "@/context/language-context";
 import SectionTitle from "./section-title";
 import { aboutData } from "@/core/static/about";
