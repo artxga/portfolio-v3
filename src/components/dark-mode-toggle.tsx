@@ -27,7 +27,7 @@ const DarkModeToggle = () => {
       className="hover:cursor-pointer"
       aria-label="Toggle dark mode"
     >
-      {darkMode ? <Sun className='text-[var(--foreground)] hover:text-[var(--accent)]' size={iconSize} /> : <Moon className='text-[var(--foreground)] hover:text-[var(--accent)]' size={iconSize} />}
+      {darkMode ? <Sun className='text-[var(--foreground)] md:hover:text-[var(--accent)]' size={iconSize} /> : <Moon className='text-[var(--foreground)] md:hover:text-[var(--accent)]' size={iconSize} />}
     </button>
   )
 }

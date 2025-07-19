@@ -33,13 +33,13 @@ export default function HeroSection() {
           ))}
         </ul>
 
-        <a className="relative w-fit group text-sm font-medium uppercase text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)] focus-visible:text-[var(--accent)]"
+        <a className="relative w-fit group text-sm font-medium uppercase text-[var(--foreground)] transition-colors duration-200 md:hover:text-[var(--accent)] focus-visible:text-[var(--accent)]"
           href={heroData.resume[language].file}
           download
           target="_blank"
           rel="noopener noreferrer">
           {heroData.resume[language].description}
-          <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[var(--accent)] transition-all duration-300 transform -translate-x-1/2 group-hover:w-full group-focus-visible:w-full"></span>
+          <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[var(--accent)] transition-all duration-300 transform -translate-x-1/2 md:group-hover:w-full group-focus-visible:w-full"></span>
         </a>
 
         <SocialBar />

@@ -9,7 +9,7 @@ export default function SocialBar() {
           aria-label={id}
           target="_blank"
           key={idx}
-          className="text-[var(--foreground)] transition-transform duration-200 hover:text-[var(--accent)] focus-visible:text-[var(--accent)] hover:scale-110 focus-visible:scale-110"
+          className="text-[var(--foreground)] transition-transform duration-200 md:hover:text-[var(--accent)] focus-visible:text-[var(--accent)] md:hover:scale-110 focus-visible:scale-110"
           rel="noopener noreferrer"
         >
           <Icon size={24} />

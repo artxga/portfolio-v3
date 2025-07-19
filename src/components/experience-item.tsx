@@ -48,7 +48,7 @@ export default function ExperienceItem(props: typeof experiences[number]) {
           <span className="text-base font-medium text-[var(--foreground)]">
             {fields?.jobTitle}
           </span>
-          <a className="text-sm font-medium text-[var(--accent)] hover:text-[var(--hover)] " href={props.link} target="_blank">
+          <a className="text-sm font-medium text-[var(--accent)] md:hover:text-[var(--hover)] " href={props.link} target="_blank">
             {fields?.company} | {fields?.period}
           </a>
         </div>

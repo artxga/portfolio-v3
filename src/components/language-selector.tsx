@@ -66,7 +66,7 @@ const LanguageSelector = () => {
       onMouseLeave={hideMenu}
       onClick={toggleMenu}
     >
-      <div className="p-2 rounded-lg transition-colors cursor-pointer hover:bg-[var(--accent)/10] hover:text-[var(--accent)]">
+      <div className="p-2 rounded-lg transition-colors cursor-pointer md:hover:bg-[var(--accent)/10] md:hover:text-[var(--accent)]">
         <Languages size={24} />
       </div>
 
