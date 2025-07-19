@@ -7,7 +7,7 @@ import HeroSection from "@/components/hero-section";
 import LanguageSelector from "@/components/language-selector";
 import MobileNavbar from "@/components/mobile-navbar";
 import ProjectsSection from "@/components/projects-section";
-import Image from "next/image";
+import ThreeModel from "@/components/3d/three-model";
 
 export default function LandingPage() {
   return (
@@ -25,7 +25,7 @@ export default function LandingPage() {
         <HeroSection />
 
         <div className="flex flex-col col-start-1 col-end-13 mb-12 md:col-start-7 md:col-end-12 2xl:col-end-11">
-          <section className="flex-col justify-center hidden h-screen md:flex">
+          {/* <section className="flex-col justify-center hidden h-screen md:flex">
             <div className="relative overflow-hidden rounded-xl h-5/6 border border-[var(--details)] shadow-md hover:shadow-lg transition-shadow duration-500 group">
               <Image
                 src="/portrait.webp"
@@ -35,7 +35,13 @@ export default function LandingPage() {
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-[1.03]"
               />
             </div>
+          </section> */}
+          <section className="flex-col justify-center hidden h-screen md:flex">
+            {/* <div className="relative overflow-hidden rounded-xl h-5/6 border border-[var(--details)] shadow-md hover:shadow-lg transition-shadow duration-500"> */}
+            <ThreeModel />
+            {/* </div> */}
           </section>
+
 
           <AboutSection />
           <ExperienceSection />
