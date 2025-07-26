@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const socialBarData = [
   {
