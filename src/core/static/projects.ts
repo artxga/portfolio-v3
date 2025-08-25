@@ -12,26 +12,26 @@ export interface ProjectData {
 }
 
 export const projects: ProjectData[] = [
+  // {
+  //   title: {
+  //     en: "Portfolio 3.0",
+  //     es: "Portafolio 3.0",
+  //   },
+  //   description: {
+  //     en: "A clean, responsive portfolio site built to showcase skills, projects, and technologies in a modern and performant stack.",
+  //     es: "Sitio web de portafolio moderno, limpio y responsivo para mostrar habilidades, proyectos y tecnologías empleadas.",
+  //   },
+  //   techStack: ["React", "Next.js", "Tailwind", "TypeScript", "Git"],
+  //   img: {
+  //     src: "/projects/portfolio_3.webp",
+  //     alt: "Portfolio 3.0",
+  //   },
+  //   link: "https://github.com/artxga/portfolio-v3",
+  // },
   {
     title: {
-      en: "Portfolio 3.0",
-      es: "Portafolio 3.0",
-    },
-    description: {
-      en: "A clean, responsive portfolio site built to showcase skills, projects, and technologies in a modern and performant stack.",
-      es: "Sitio web de portafolio moderno, limpio y responsivo para mostrar habilidades, proyectos y tecnologías empleadas.",
-    },
-    techStack: ["React", "Next.js", "Tailwind", "TypeScript", "Git"],
-    img: {
-      src: "/projects/portfolio_3.webp",
-      alt: "Portfolio 3.0",
-    },
-    link: "https://github.com/artxga/portfolio-v3",
-  },
-  {
-    title: {
-      en: "Savings Web App (Work in progress)",
-      es: "Savings Web App (En construcción)",
+      en: "Savings Web App",
+      es: "Savings Web App",
     },
     description: {
       en: "A personal finance management platform designed to help users track income, expenses, and savings efficiently.",
@@ -52,6 +52,7 @@ export const projects: ProjectData[] = [
       src: "/projects/savings_project.webp",
       alt: "Savings App",
     },
+    link: "https://savings-project.vercel.app/login",
   },
   {
     title: {

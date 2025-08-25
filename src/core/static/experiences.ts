@@ -16,6 +16,33 @@ export interface ExperienceData {
 export const experiences: ExperienceData[] = [
   {
     jobTitle: {
+      en: "Software Engineer",
+      es: "Software Engineer",
+    },
+    company: {
+      en: "NTT DATA - Prima AFP (Systems Management)",
+      es: "NTT DATA - Prima AFP (Gerencia de Sistemas)",
+    },
+    period: {
+      en: "August 2025 - Present",
+      es: "Agosto 2025 - Actualidad",
+    },
+    description: {
+      en: "Currently working on a project focused on optimizing the performance of a system used for the management of the AFP system.",
+      es: "Actualmente trabajando en un proyecto enfocado en optimizar el rendimiento de un sistema utilizado para la gestión de clientes de la AFP.",
+    },
+    tools: {
+      en: ["Node", "React", "Next.js", "TypeScript", "Azure"],
+      es: ["Node", "React", "Next.js", "TypeScript", "Azure"],
+    },
+    logo: {
+      src: "/experiences/ntt_data_logo.jpg",
+      alt: "NTT DATA Logo",
+    },
+    link: "https://www.nttdata.com/",
+  },
+  {
+    jobTitle: {
       en: "Full Stack Developer",
       es: "Desarrollador Full Stack",
     },
@@ -24,8 +51,8 @@ export const experiences: ExperienceData[] = [
       es: "Promart (Gerencia Vta. Corporativa)",
     },
     period: {
-      en: "August 2024 - Present",
-      es: "Agosto 2024 - Actualidad",
+      en: "August 2024 - August 2025",
+      es: "Agosto 2024 - Agosto 2025",
     },
     description: {
       en: "Developed features for a B2B e-commerce platform, focusing on personalized bulk purchases for corporate clients. Maintained and improved a custom internal CRM to support sales operations across online and in-store channels. Worked on microservice-based systems and integrated with third-party services to ensure reliable and synchronized data flow.",
@@ -114,8 +141,8 @@ export const experiences: ExperienceData[] = [
   },
   {
     jobTitle: {
-      en: "Mobile Frontend Developer",
-      es: "Desarrollador Frontend Mobile",
+      en: "Junior Engineer",
+      es: "Junior Engineer",
     },
     company: {
       en: "NTT DATA - Telefónica (Tren E-Care)",
