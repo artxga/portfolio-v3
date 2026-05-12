@@ -43,14 +43,8 @@ function Particles() {
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          args={[positions, 3]}
-        />
-        <bufferAttribute
-          attach="attributes-color"
-          args={[colors, 3]}
-        />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-color" args={[colors, 3]} />
       </bufferGeometry>
       <pointsMaterial
         size={0.025}
@@ -72,9 +66,12 @@ function NeuralCore() {
 
     materialRef.current.uniforms.uTime.value = t;
 
-    // 🎯 reacción al cursor
+    // 🎯 reacción al cursor (suave)
     meshRef.current.rotation.y += (mouse.x * 0.5 - meshRef.current.rotation.y) * 0.05;
     meshRef.current.rotation.x += (-mouse.y * 0.5 - meshRef.current.rotation.x) * 0.05;
+
+    meshRef.current.rotation.y += 0.002;
+    meshRef.current.rotation.x += 0.001;
   });
 
   return (
@@ -90,14 +87,17 @@ function NeuralCore() {
 
           varying vec3 vNormal;
           varying vec3 vPosition;
+          varying vec3 vWorldPosition;
 
           float noise(vec3 p) {
-            return sin(p.x) * sin(p.y) * sin(p.z);
+            return sin(p.x + uTime) * sin(p.y * 1.3) * sin(p.z * 0.7);
           }
 
           void main() {
             vNormal = normal;
             vPosition = position;
+
+            vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
 
             float n = noise(position * 3.0 + uTime * 1.2);
 
@@ -111,15 +111,16 @@ function NeuralCore() {
 
           varying vec3 vNormal;
           varying vec3 vPosition;
+          varying vec3 vWorldPosition;
 
           void main() {
             vec3 normal = normalize(vNormal);
-            vec3 viewDir = normalize(vec3(0.0, 0.0, 1.0));
+            vec3 viewDir = normalize(cameraPosition - vWorldPosition);
 
-            // 🔥 Fresnel
+            // 🔥 Fresnel real
             float fresnel = pow(1.0 - dot(normal, viewDir), 2.5);
 
-            // 🌈 iridescencia
+            // 🌈 iridescencia basada en ángulo real
             float iridescence = dot(normal, viewDir);
 
             vec3 iridescentColor = vec3(
@@ -149,7 +150,7 @@ export default function ThreeModel() {
   return (
     <div className="aspect-square h-1/2 lg:h-3/4">
       <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
-        {/* 💡 iluminación mejorada */}
+        {/* 💡 iluminación */}
         <ambientLight intensity={0.15} />
         <pointLight position={[3, 3, 3]} intensity={2.2} />
         <pointLight position={[-3, -2, 2]} intensity={1.5} color="#ff00ff" />
