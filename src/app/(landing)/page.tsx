@@ -36,7 +36,7 @@ export default function LandingPage() {
               />
             </div>
           </section> */}
-          <section className="flex-col justify-center hidden h-screen md:flex">
+          <section className="flex-col justify-center hidden h-screen md:flex w-max">
             {/* <div className="relative overflow-hidden rounded-xl h-5/6 border border-[var(--details)] shadow-md hover:shadow-lg transition-shadow duration-500"> */}
             <ThreeModel />
             {/* </div> */}
