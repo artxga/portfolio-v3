@@ -1,97 +1,162 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Float, Html } from "@react-three/drei";
-import { Suspense, useRef, useEffect, useState } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense, useRef, useMemo } from "react";
 import * as THREE from "three";
 
-function LivingEntity({ lookTarget }: { lookTarget: THREE.Vector3 }) {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const timeRef = useRef(0);
-  const originalPositions = useRef<Float32Array | null>(null);
+function Particles() {
+  const pointsRef = useRef<THREE.Points>(null!);
 
-  useFrame((state, delta) => {
-    timeRef.current += delta * 1.5;
+  const { positions, colors } = useMemo(() => {
+    const count = 600;
+    const positions = new Float32Array(count * 3);
+    const colors = new Float32Array(count * 3);
 
-    const mesh = meshRef.current;
-    const geometry = mesh.geometry as THREE.IcosahedronGeometry;
-    const position = geometry.attributes.position as THREE.BufferAttribute;
+    const color = new THREE.Color();
 
-    if (!originalPositions.current) {
-      originalPositions.current = Float32Array.from(position.array);
-    }
-
-    const count = position.count;
     for (let i = 0; i < count; i++) {
-      const ix = i * 3;
-      const ox = originalPositions.current[ix];
-      const oy = originalPositions.current[ix + 1];
-      const oz = originalPositions.current[ix + 2];
+      const r = 1.5 + Math.random() * 1.5;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos((Math.random() - 0.5) * 2);
 
-      const normal = new THREE.Vector3(ox, oy, oz).normalize();
-      const pulse =
-        Math.sin(timeRef.current * 2 + i * 0.5) * 0.1 +
-        Math.sin(timeRef.current + i * 0.3) * 0.05;
+      const x = r * Math.sin(phi) * Math.cos(theta);
+      const y = r * Math.sin(phi) * Math.sin(theta);
+      const z = r * Math.cos(phi);
 
-      position.setXYZ(i, ox + normal.x * pulse, oy + normal.y * pulse, oz + normal.z * pulse);
+      positions.set([x, y, z], i * 3);
+
+      // 🎨 color variado por partícula
+      color.setHSL(Math.random(), 0.7, 0.6);
+      colors.set([color.r, color.g, color.b], i * 3);
     }
 
-    position.needsUpdate = true;
+    return { positions, colors };
+  }, []);
 
-    const material = mesh.material as THREE.MeshStandardMaterial;
-    const hue = (Math.sin(timeRef.current * 0.3) + 1) / 2;
-    material.color.setHSL(hue, 0.7, 0.6);
+  useFrame((state) => {
+    const t = state.clock.elapsedTime;
+    pointsRef.current.rotation.y = t * 0.05;
+    pointsRef.current.rotation.x = t * 0.02;
+  });
 
-    // Apuntar suavemente al cursor 3D
-    const currentPos = new THREE.Vector3();
-    mesh.getWorldPosition(currentPos);
+  return (
+    <points ref={pointsRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          args={[positions, 3]}
+        />
+        <bufferAttribute
+          attach="attributes-color"
+          args={[colors, 3]}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.025}
+        vertexColors
+        transparent
+        opacity={0.85}
+      />
+    </points>
+  );
+}
 
-    const dir = new THREE.Vector3().subVectors(lookTarget, currentPos).normalize();
-    const targetPos = new THREE.Vector3().addVectors(currentPos, dir);
-    mesh.lookAt(targetPos);
+function NeuralCore() {
+  const meshRef = useRef<THREE.Mesh>(null!);
+  const materialRef = useRef<THREE.ShaderMaterial>(null!);
+  const { mouse } = useThree();
+
+  useFrame((state) => {
+    const t = state.clock.elapsedTime;
+
+    materialRef.current.uniforms.uTime.value = t;
+
+    // 🎯 reacción al cursor
+    meshRef.current.rotation.y += (mouse.x * 0.5 - meshRef.current.rotation.y) * 0.05;
+    meshRef.current.rotation.x += (-mouse.y * 0.5 - meshRef.current.rotation.x) * 0.05;
   });
 
   return (
     <mesh ref={meshRef}>
-      <icosahedronGeometry args={[1, 5]} />
-      <meshStandardMaterial wireframe />
+      <icosahedronGeometry args={[1, 64]} />
+      <shaderMaterial
+        ref={materialRef}
+        uniforms={{
+          uTime: { value: 0 },
+        }}
+        vertexShader={`
+          uniform float uTime;
+
+          varying vec3 vNormal;
+          varying vec3 vPosition;
+
+          float noise(vec3 p) {
+            return sin(p.x) * sin(p.y) * sin(p.z);
+          }
+
+          void main() {
+            vNormal = normal;
+            vPosition = position;
+
+            float n = noise(position * 3.0 + uTime * 1.2);
+
+            vec3 newPosition = position + normal * n * 0.2;
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
+          }
+        `}
+        fragmentShader={`
+          uniform float uTime;
+
+          varying vec3 vNormal;
+          varying vec3 vPosition;
+
+          void main() {
+            vec3 normal = normalize(vNormal);
+            vec3 viewDir = normalize(vec3(0.0, 0.0, 1.0));
+
+            // 🔥 Fresnel
+            float fresnel = pow(1.0 - dot(normal, viewDir), 2.5);
+
+            // 🌈 iridescencia
+            float iridescence = dot(normal, viewDir);
+
+            vec3 iridescentColor = vec3(
+              0.5 + 0.5 * sin(6.0 * iridescence + uTime),
+              0.5 + 0.5 * sin(6.0 * iridescence + uTime + 2.0),
+              0.5 + 0.5 * sin(6.0 * iridescence + uTime + 4.0)
+            );
+
+            // 🌊 pulso interno
+            float pulse = sin(uTime * 2.0 + length(vPosition) * 5.0) * 0.5 + 0.5;
+
+            vec3 base = mix(vec3(0.05, 0.1, 0.2), iridescentColor, pulse);
+
+            // ✨ glow + energía
+            vec3 color = base + fresnel * 1.2;
+            color += pulse * 0.3;
+
+            gl_FragColor = vec4(color, 1.0);
+          }
+        `}
+      />
     </mesh>
   );
-}
-
-function CursorTracker() {
-  const [target, setTarget] = useState(new THREE.Vector3(0, 0, 0));
-
-  useEffect(() => {
-    function handleMouseMove(e: MouseEvent) {
-      const x = (e.clientX / window.innerWidth) * 2 - 1;
-      const y = -(e.clientY / window.innerHeight) * 2 + 1;
-      // Apunta más profundo en Z para mejor reacción
-      const vector = new THREE.Vector3(x, y, 0.5).unproject(camera);
-      setTarget(vector);
-    }
-
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(0, 0, 3.5);
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  return <LivingEntity lookTarget={target} />;
 }
 
 export default function ThreeModel() {
   return (
     <div className="aspect-square h-1/2 lg:h-3/4">
-      <Canvas camera={{ position: [0, 0, 3.5], fov: 45 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
+      <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
+        {/* 💡 iluminación mejorada */}
+        <ambientLight intensity={0.15} />
+        <pointLight position={[3, 3, 3]} intensity={2.2} />
+        <pointLight position={[-3, -2, 2]} intensity={1.5} color="#ff00ff" />
 
-        <Suspense fallback={<Html center>Loading...</Html>}>
-          <Float speed={2} rotationIntensity={1.5} floatIntensity={2.5}>
-            <CursorTracker />
-          </Float>
+        <Suspense fallback={null}>
+          <NeuralCore />
+          <Particles />
         </Suspense>
 
         <OrbitControls enableZoom={false} />
