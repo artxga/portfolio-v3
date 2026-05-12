@@ -16,11 +16,11 @@ export const heroData = {
   resume: {
     en: {
       description: "Download Resume",
-      file: "/angel-arteaga-en.pdf",
+      file: "https://drive.google.com/file/d/1jd3UQIqmKB6uKqPrYyGWsbfZeFYLUv4s/view?usp=sharing",
     },
     es: {
       description: "Descargar CV",
-      file: "/angel-arteaga-es.pdf",
+      file: "https://drive.google.com/file/d/1jd3UQIqmKB6uKqPrYyGWsbfZeFYLUv4s/view?usp=sharing",
     },
   },
 };
