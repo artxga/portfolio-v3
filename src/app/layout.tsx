@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/language-context";
+import JsonLd from "@/components/json-ld";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -9,45 +10,87 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Angel Arteaga | Full Stack Developer",
+  metadataBase: new URL("https://angel-arteaga.vercel.app"),
+  title: "Angel Arteaga | Senior Frontend Developer",
   description:
-    "Portafolio de Angel Arteaga, desarrollador Full Stack. Explora proyectos, experiencia y servicios tecnológicos.",
+    "Portfolio of Angel Arteaga, Senior Frontend Developer specialized in React, Next.js, TypeScript, Microfrontends and Azure AI. Building scalable digital platforms for the financial and e-commerce sectors.",
   authors: [{ name: "Angel Arteaga" }],
+  creator: "Angel Arteaga",
   keywords: [
     "Angel Arteaga",
+    "Senior Frontend Developer",
     "Full Stack Developer",
-    "Next.js",
-    "React",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Microfrontends",
+    "Azure AI",
+    "Azure",
     "Node.js",
+    "NestJS",
+    "React Native",
+    "Solidity",
+    "Blockchain",
+    "Polygon",
     "JavaScript",
-    "TypeScript",
     "Angular",
-    "HTML",
-    "CSS",
-    "Tailwind CSS",
-    "Git",
-    "GitHub",
-    "Golang",
+    "Ionic",
     "Docker",
     "AWS",
+    "GCP",
+    "PostgreSQL",
     "MongoDB",
     "MySQL",
-    "PostgreSQL",
-    "Redis",
-    "GCP",
-    "Portafolio de desarrollador",
+    "Go",
+    "Java",
+    "Python",
+    "NTT DATA",
+    "Scotiabank",
+    "Software Engineer",
+    "Portfolio",
+    "Portafolio desarrollador",
     "Desarrollo web",
-    "AltaVista IT",
+    "Peru",
+    "Lima",
   ],
-  creator: "Angel Arteaga",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://angel-arteaga.vercel.app/",
+  },
   openGraph: {
-    title: "Angel Arteaga | Full Stack Developer",
+    title: "Angel Arteaga | Senior Frontend Developer",
     description:
-      "Desarrollador Full Stack creando soluciones modernas con tecnologías como React, Next.js y Node.js.",
+      "Senior Frontend Developer building scalable digital platforms with React, Next.js, Microfrontends, and Azure AI.",
     url: "https://angel-arteaga.vercel.app/",
     siteName: "Angel Arteaga Portfolio",
     type: "website",
     locale: "es_PE",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Angel Arteaga — Senior Frontend Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angel Arteaga | Senior Frontend Developer",
+    description:
+      "Senior Frontend Developer building scalable digital platforms with React, Next.js, Microfrontends, and Azure AI.",
+    images: ["/og-image.png"],
+    creator: "@angelarteaga",
   },
 };
 
@@ -59,6 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased  duration-300 bg-[var(--background)] text-[var(--foreground)]`}>
+        <JsonLd />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
