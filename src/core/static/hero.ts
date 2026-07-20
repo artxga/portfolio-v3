@@ -1,8 +1,8 @@
 export const heroData = {
   name: "Angel Arteaga",
   role: {
-    en: "Full Stack Developer",
-    es: "Desarrollador Full Stack",
+    en: "Senior Frontend Developer",
+    es: "Senior Frontend Developer",
   },
   description: {
     en: "I create tech solutions that generate real impact.",

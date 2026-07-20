@@ -16,35 +16,62 @@ export interface ExperienceData {
 export const experiences: ExperienceData[] = [
   {
     jobTitle: {
-      en: "Software Engineer",
-      es: "Software Engineer",
+      en: "Senior Frontend Developer",
+      es: "Senior Frontend Developer",
     },
     company: {
-      en: "NTT DATA - Prima AFP (Systems Management)",
-      es: "NTT DATA - Prima AFP (Gerencia de Sistemas)",
+      en: "NTT DATA - Scotiabank",
+      es: "NTT DATA - Scotiabank",
     },
     period: {
-      en: "August 2025 - Present",
-      es: "Agosto 2025 - Actualidad",
+      en: "July 2026 - Present",
+      es: "Julio 2026 - Actualmente",
     },
     description: {
-      en: "Currently working on a project focused on optimizing the performance of a system used for the management of the AFP system.",
-      es: "Actualmente trabajando en un proyecto enfocado en optimizar el rendimiento de un sistema utilizado para la gestión de clientes de la AFP.",
+      en: "Designed and implemented the architecture and migration towards a microfrontends infrastructure, optimizing digital platform scalability and enabling frictionless independent deployments. Designed high-availability interfaces ensuring design system consistency and agile integration with core banking financial services.",
+      es: "Diseño e implemento la arquitectura y migración hacia una infraestructura de microfrontends, optimizando la escalabilidad de las plataformas digitales y permitiendo despliegues independientes sin fricción. Diseño interfaces de alta disponibilidad garantizando la consistencia del sistema de diseño y la integración ágil con servicios financieros del core bancario.",
     },
     tools: {
-      en: ["Node", "React", "Next.js", "TypeScript", "Azure"],
-      es: ["Node", "React", "Next.js", "TypeScript", "Azure"],
+      en: ["React", "Next.js", "TypeScript", "Microfrontends"],
+      es: ["React", "Next.js", "TypeScript", "Microfrontends"],
     },
     logo: {
       src: "/experiences/ntt_data_logo.jpg",
       alt: "NTT DATA Logo",
     },
-    link: "https://www.nttdata.com/",
+    link: "https://www.scotiabank.com.pe/",
   },
   {
     jobTitle: {
-      en: "Full Stack Developer",
-      es: "Desarrollador Full Stack",
+      en: "Mid Frontend Developer",
+      es: "Mid Frontend Developer",
+    },
+    company: {
+      en: "NTT DATA - Prima AFP",
+      es: "NTT DATA - Prima AFP",
+    },
+    period: {
+      en: "August 2025 - June 2026",
+      es: "Agosto 2025 - Junio 2026",
+    },
+    description: {
+      en: "Designed and implemented microfrontends architecture, reducing modular coupling and accelerating production deployment cycles. Developed and integrated artificial intelligence agentic solutions (Azure AI), optimizing internal customer experience and significantly reducing business operational costs. Automated critical processes through the integration of complex APIs and high-security biometric validation.",
+      es: "Diseñé e implementé la arquitectura de microfrontends, reduciendo el acoplamiento modular y acelerando los ciclos de despliegue en producción. Desarrollé e integré soluciones agénticas de Inteligencia Artificial (Azure AI), optimizando la experiencia del cliente interno y reduciendo significativamente los costos operativos del negocio. Automaticé procesos críticos mediante la integración de APIs complejas y validación biométrica de alta seguridad.",
+    },
+    tools: {
+      en: ["Node", "React", "Next.js", "TypeScript", "Azure", "Azure AI"],
+      es: ["Node", "React", "Next.js", "TypeScript", "Azure", "Azure AI"],
+    },
+    logo: {
+      src: "/experiences/ntt_data_logo.jpg",
+      alt: "NTT DATA Logo",
+    },
+    link: "https://www.prima.com.pe/",
+  },
+  {
+    jobTitle: {
+      en: "Mid Full Stack Developer",
+      es: "Mid Full Stack Developer",
     },
     company: {
       en: "Promart (Corporate Sales Management)",
@@ -55,8 +82,8 @@ export const experiences: ExperienceData[] = [
       es: "Agosto 2024 - Agosto 2025",
     },
     description: {
-      en: "Developed features for a B2B e-commerce platform, focusing on personalized bulk purchases for corporate clients. Maintained and improved a custom internal CRM to support sales operations across online and in-store channels. Worked on microservice-based systems and integrated with third-party services to ensure reliable and synchronized data flow.",
-      es: "Desarrollé funcionalidades para una plataforma e-commerce B2B, enfocadas en compras masivas personalizadas para clientes corporativos. Di mantenimiento y mejoras a un CRM interno personalizado que respaldaba operaciones de ventas en línea y en tienda. Trabajé con sistemas basados en microservicios e integraciones con servicios externos para asegurar un flujo de datos sincronizado y confiable.",
+      en: "Empowered the B2B e-commerce platform, increasing efficiency in corporate sales management and commercial conversion. Migrated the architecture to an event-driven microservices ecosystem, raising system availability and scalability during traffic peaks. Reduced the product's technical debt, positively impacting the team's development speed.",
+      es: "Potencié la plataforma e-commerce B2B, incrementando la eficiencia en la gestión de ventas corporativas y la conversión comercial. Migré la arquitectura hacia un ecosistema de microservicios orientados a eventos, elevando la disponibilidad y escalabilidad del sistema ante picos de tráfico. Reduje la deuda técnica del producto, impactando positivamente en la velocidad de desarrollo del equipo.",
     },
     tools: {
       en: [
@@ -94,20 +121,20 @@ export const experiences: ExperienceData[] = [
   },
   {
     jobTitle: {
-      en: "Full Stack Developer",
-      es: "Desarrollador Full Stack",
+      en: "Mid Full Stack Developer",
+      es: "Mid Full Stack Developer",
     },
     company: {
       en: "Avatar Global",
       es: "Avatar Global",
     },
     period: {
-      en: "May 2023 – August 2024",
-      es: "Mayo 2023 – Agosto 2024",
+      en: "May 2023 - August 2024",
+      es: "Mayo 2023 - Agosto 2024",
     },
     description: {
-      en: "Built custom e-commerce solutions for clients in various countries, aligned with specific business requirements. Developed scalable microservices using Java and Node.js to support inventory management and transactional flows. Contributed to the configuration of development and production environments, enhancing team collaboration and deployment stability.",
-      es: "Construí soluciones e-commerce personalizadas para clientes en distintos países, alineadas a requerimientos específicos del negocio. Desarrollé microservicios escalables con Java y Node.js para respaldar la gestión de inventario y flujos transaccionales. Contribuí a la configuración de entornos de desarrollo y producción, mejorando la colaboración entre equipos y la estabilidad en despliegues.",
+      en: "Developed custom e-commerce solutions for international clients, ensuring consistency in transaction processing. Built robust microservices in Node.js and Java for automated large-scale inventory management. Configured continuous integration and deployment (CI/CD) pipelines, optimizing team delivery times.",
+      es: "Desarrollé soluciones e-commerce a medida para clientes internacionales, asegurando la consistencia en el procesamiento de transacciones. Construí microservicios robustos en Node.js y Java para la gestión automatizada de inventarios a gran escala. Configuré flujos de integración y despliegue continuo (CI/CD), optimizando los tiempos de entrega del equipo.",
     },
     tools: {
       en: [
@@ -141,20 +168,20 @@ export const experiences: ExperienceData[] = [
   },
   {
     jobTitle: {
-      en: "Junior Engineer",
-      es: "Junior Engineer",
+      en: "Junior Frontend Developer",
+      es: "Junior Frontend Developer",
     },
     company: {
       en: "NTT DATA - Telefónica (Tren E-Care)",
       es: "NTT DATA - Telefónica (Tren E-Care)",
     },
     period: {
-      en: "August 2022 – May 2023",
-      es: "Agosto 2022 – Mayo 2023",
+      en: "August 2022 - May 2023",
+      es: "Agosto 2022 - Mayo 2023",
     },
     description: {
-      en: "Developed mobile applications for customer service management using Angular and Ionic. Integrated frontend components with Telefónica’s internal systems through APIs, ensuring efficient access to critical processes. Focused on enhancing performance and responsiveness for Android and iOS devices.",
-      es: "Desarrollé aplicaciones móviles para la gestión de servicios y atención al cliente con Angular e Ionic. Integré componentes frontend con los sistemas internos de Telefónica mediante APIs, asegurando el acceso eficiente a procesos clave. Me enfoqué en optimizar el rendimiento y la responsividad en dispositivos Android e iOS.",
+      en: "Developed native/hybrid mobile applications with Angular and Ionic, improving response times and customer retention in digital channels. Optimized general performance of apps for iOS and Android, reducing device memory consumption.",
+      es: "Desarrollé aplicaciones móviles nativas/híbridas con Angular e Ionic, mejorando los tiempos de respuesta y la retención del cliente en canales digitales. Optimicé el rendimiento general de las apps para iOS y Android, reduciendo el consumo de memoria del dispositivo.",
     },
     tools: {
       en: ["Angular", "Ionic", "React", "Node.js"],
