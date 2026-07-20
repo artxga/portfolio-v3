@@ -11,6 +11,7 @@ export const heroData = {
   navLinks: [
     { id: "about", label: { en: "About", es: "Sobre mí" } },
     { id: "experience", label: { en: "Experience", es: "Experiencia" } },
+    { id: "certifications", label: { en: "Certifications", es: "Certificaciones" } },
     { id: "projects", label: { en: "Projects", es: "Proyectos" } },
   ],
   resume: {

@@ -7,6 +7,7 @@ import HeroSection from "@/components/hero-section";
 import LanguageSelector from "@/components/language-selector";
 import MobileNavbar from "@/components/mobile-navbar";
 import ProjectsSection from "@/components/projects-section";
+import CertificationsSection from "@/components/certifications-section";
 import ThreeModel from "@/components/3d/three-model";
 
 export default function LandingPage() {
@@ -45,6 +46,7 @@ export default function LandingPage() {
 
           <AboutSection />
           <ExperienceSection />
+          <CertificationsSection />
           <ProjectsSection />
           <FooterSection />
         </div>
