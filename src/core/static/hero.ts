@@ -17,11 +17,11 @@ export const heroData = {
   resume: {
     en: {
       description: "Download Resume",
-      file: "https://drive.google.com/file/d/1jd3UQIqmKB6uKqPrYyGWsbfZeFYLUv4s/view?usp=sharing",
+      file: "https://drive.google.com/file/d/1La_Rn0ZH9PNnjVVzNIlAC40NYM6lbVxj/view?usp=sharing",
     },
     es: {
       description: "Descargar CV",
-      file: "https://drive.google.com/file/d/1jd3UQIqmKB6uKqPrYyGWsbfZeFYLUv4s/view?usp=sharing",
+      file: "https://drive.google.com/file/d/1La_Rn0ZH9PNnjVVzNIlAC40NYM6lbVxj/view?usp=sharing",
     },
   },
 };

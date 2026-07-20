@@ -12,6 +12,31 @@ export interface ProjectData {
 }
 
 export const projects: ProjectData[] = [
+  {
+    title: {
+      en: "Lumen Solar",
+      es: "Lumen Solar",
+    },
+    description: {
+      en: "Comprehensive on-demand digital asset sales platform powered by blockchain payments. Built with a robust ecosystem including a cross-platform mobile app and a web administration panel. The architecture leverages smart contracts on the Polygon network, seamless multi-wallet integration, and a NestJS backend, handling high-concurrency on-chain event synchronization using Ethers and RabbitMQ.",
+      es: "Plataforma integral para la venta on-demand de activos digitales mediante pagos blockchain. Desarrollada con un ecosistema robusto que incluye una app móvil multiplataforma y un panel administrativo web. La arquitectura se apoya en contratos inteligentes sobre la red de Polygon, integración fluida con múltiples wallets, y un sistema backend impulsado por NestJS, manejando la sincronización de eventos on-chain de alta concurrencia con Ethers y RabbitMQ.",
+    },
+    techStack: [
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "Solidity",
+      "Polygon",
+      "TypeScript",
+      "Ethers",
+      "RabbitMQ",
+      "PostgreSQL",
+    ],
+    img: {
+      src: "/projects/lumen_solar.png",
+      alt: "Lumen Solar Platform",
+    },
+  },
   // {
   //   title: {
   //     en: "Portfolio 3.0",
