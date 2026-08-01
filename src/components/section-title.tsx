@@ -30,7 +30,7 @@ export default function SectionTitle({ title }: { title: string }) {
 
   return (
     <>
-      <div ref={refSentinel} className="h-[1px] -mt-[22px]" />
+      <div ref={refSentinel} className="h-[1px] top-[-20px] relative" />
 
       <div className={cn("sticky md:static top-[22px] z-40 flex items-center gap-4 uppercase ", stuck && "w-fit")}>
         <h2 className="text-sm md:text-base font-bold text-[var(--foreground)]">
