@@ -44,6 +44,36 @@ export const projects: ProjectData[] = [
   },
   {
     title: {
+      en: "Prima AFP Virtual Agency",
+      es: "Agencia Virtual Prima AFP",
+    },
+    category: {
+      en: "Professional",
+      es: "Profesional",
+    },
+    client: {
+      en: "Prima AFP",
+      es: "Prima AFP",
+    },
+    description: {
+      en: "Digital self-service platform that enables customers to securely manage retirement accounts and online procedures. Participated in the implementation of modern microfrontend architecture and AI-powered virtual assistants to enhance customer experience.",
+      es: "Plataforma de autoservicio digital que permite a los clientes gestionar sus fondos previsionales y realizar trámites en línea de forma segura. Participé en la implementación de una arquitectura de microfrontends y asistentes virtuales impulsados por IA para mejorar la experiencia del usuario.",
+    },
+    techStack: [
+      "React",
+      "Next.js",
+      "Module Federation",
+      "Microfrontends",
+      "Azure AI Foundry",
+      "TypeScript",
+    ],
+    img: {
+      src: "/projects/prima.webp",
+      alt: "Prima AFP Virtual Agency",
+    },
+  },
+  {
+    title: {
       en: "Promart B2B E-commerce",
       es: "E-commerce B2B Promart",
     },
