@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <div className="top-0 flex flex-col justify-center h-screen col-start-1 col-end-13 md:sticky md:col-start-2 md:col-span-4 2xl:col-span-3 2xl:col-start-3">
-      <div className="flex flex-col gap-16 h-fit">
+      <div className="flex flex-col gap-16 h-fit md:mt-0 mt-[63px]">
         <div className="flex flex-col gap-4">
           <h1 className="text-4xl font-bold md:text-5xl text-[var(--foreground)]">
             {heroData.name}
